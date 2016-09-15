@@ -2,7 +2,7 @@
 #
 # Team Octos release tools
 #
-. $ANDROID_BUILD_TOP/vendor/to/tools/functions
+. $ANDROID_BUILD_TOP/vendor/hexa/tools/functions
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
 if [ -z "$OUT_TARGET_HOST" ]
@@ -73,7 +73,7 @@ OUTFILE=$OUT/$MODVERSION-$TARGET_PRODUCT_FINAL.zip
 if [ "$TO_CHANGELOG" = true ]
 then
 # Add changelog
-. $ANDROID_BUILD_TOP/vendor/to/tools/changelog
+. $ANDROID_BUILD_TOP/vendor/hexa/tools/changelog
 else
 echo -e "No changelog..."
 echo -e
@@ -86,7 +86,7 @@ echo -e
 echo -e "Signing package..."
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
 java -Xmx20484m \
-	-jar  $ANDROID_BUILD_TOP/vendor/to/tools/signapk.jar \
+	-jar  $ANDROID_BUILD_TOP/vendor/hexa/tools/signapk.jar \
 	-w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
 	$REPACK/update.zip $OUTFILE
 echo -e

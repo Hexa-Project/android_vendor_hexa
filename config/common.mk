@@ -1,5 +1,5 @@
 # Include OctOS bootanimation
-include vendor/to/config/bootanimation.mk
+include vendor/hexa/config/bootanimation.mk
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -10,8 +10,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 endif
 
 PRODUCT_COPY_FILES += \
-    vendor/to/prebuilt/common/bin/sysinit:system/bin/sysinit \
-    vendor/to/prebuilt/common/etc/init.to.rc:root/init.to.rc
+    vendor/hexa/prebuilt/common/bin/sysinit:system/bin/sysinit \
+    vendor/hexa/prebuilt/common/etc/init.to.rc:root/init.to.rc
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
@@ -43,16 +43,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/to/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/to/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/hexa/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/hexa/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # userinit support
 PRODUCT_COPY_FILES += \
-    vendor/to/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
+    vendor/hexa/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
-    vendor/to/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+    vendor/hexa/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -63,17 +63,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # init.d script support
 PRODUCT_COPY_FILES += \
-    vendor/to/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/hexa/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/to/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/to/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/to/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/hexa/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/hexa/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/hexa/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
 
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/to/overlay/common
+    vendor/hexa/overlay/common
 
 # Include OctOS versioning
-include vendor/to/config/to_versioning.mk
+include vendor/hexa/config/hexa_versioning.mk

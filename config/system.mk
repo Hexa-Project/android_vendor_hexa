@@ -14,18 +14,18 @@
 
 # Include overlays
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/to/overlay/common \
-    vendor/to/overlay/dictionaries
+    vendor/hexa/overlay/common \
+    vendor/hexa/overlay/dictionaries
 
 # init.d script support
 PRODUCT_COPY_FILES += \
-    vendor/to/prebuilt/bin/sysinit:system/bin/sysinit
+    vendor/hexa/prebuilt/bin/sysinit:system/bin/sysinit
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/to/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/to/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/to/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/hexa/prebuilt/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/hexa/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/hexa/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
 
 # Security Enhanced Linux
 PRODUCT_PROPERTY_OVERRIDES += \

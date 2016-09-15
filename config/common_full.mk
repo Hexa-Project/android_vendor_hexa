@@ -1,5 +1,5 @@
 # Inherit additional stuff
-$(call inherit-product, vendor/to/config/common.mk)
+$(call inherit-product, vendor/hexa/config/common.mk)
 
 # Main Required Packages
 PRODUCT_PACKAGES += \

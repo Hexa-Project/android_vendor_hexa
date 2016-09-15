@@ -3,6 +3,6 @@
 # inherit from Team OctOs
 #
 BOARD_SEPOLICY_DIRS += \
-	vendor/to/sepolicy
+	vendor/hexa/sepolicy
 
 
