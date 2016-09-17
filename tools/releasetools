@@ -36,7 +36,7 @@ mkdir $REPACK/ota
 (
 cd $REPACK/ota
 echo -e "Unpacking $OTAPACKAGE..."
-unzip $QUIET $OTAPACKAGE
+unzip $QUIET $OUT/hexa_*-ota-*.*.zip
 echo -e
 
 #add aroma and other install scripts if required by the device
