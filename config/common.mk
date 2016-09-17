@@ -74,6 +74,9 @@ PRODUCT_COPY_FILES += \
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/hexa/overlay/common
+	
+PRODUCT_PACKAGES += \
+	su
 
 # Include OctOS versioning
 include vendor/hexa/config/hexa_versioning.mk

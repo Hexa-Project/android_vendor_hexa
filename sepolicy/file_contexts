@@ -1,1 +1,4 @@
 /system/bin/sysinit       u:object_r:sysinit_exec:s0
+#############
+# Superuser's control sockets
+/dev/socket/su-daemon(/.*)?   u:object_r:superuser_device:s0
