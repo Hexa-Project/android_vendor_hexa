@@ -13,7 +13,7 @@ HEXA_VERSION := HEXA-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell d
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.hexa.version=$(HEXA_VERSION) \
   ro.hexa.releasetype=$(HEXA_BUILDTYPE) \
-  ro.modversion=$(HEXA_VERSION) \
+  ro.hexa.display.version=$(HEXA_VERSION) \
 #  ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
 
 #-include vendor/cm-priv/keys/keys.mk
