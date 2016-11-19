@@ -137,7 +137,14 @@ PRODUCT_PACKAGES += \
     CMParts \
     Development \
     Profiles \
-    WeatherManagerService
+    WeatherManagerService \
+	OTAUpdates 
+
+# OTA Updater
+PRODUCT_PROPERTY_OVERRIDES += \
+  ro.ota.romname=Hexa-Project \
+  ro.ota.version=$(shell date -u +%Y%m%d) \
+  ro.ota.manifest=https://romhut.com/roms/hexa-project/ota.xml
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
