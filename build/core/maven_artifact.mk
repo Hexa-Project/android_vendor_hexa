@@ -47,7 +47,9 @@ $(LOCAL_PREBUILT_MODULE_FILE):
 		-Dmdep.overWriteSnapshots=true \
 		-Dmdep.overWriteReleases=true \
 		-Dtransitive=false \
-		-DoutputDirectory=$(dir $@)
+		-DoutputDirectory=$(dir $@) \
+		-Dmaven.wagon.http.ssl.insecure=true \
+		-Dmaven.wagon.http.ssl.allowall=true
 	@echo "Download: $@"
 
 ifneq ($(filter-out disabled, $(LOCAL_JACK_ENABLED)),)
