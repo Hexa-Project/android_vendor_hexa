@@ -168,7 +168,6 @@ PRODUCT_PACKAGES += \
     CyanogenSetupWizard \
     Eleven \
     ExactCalculator \
-    Launcher3 \
     LiveLockScreenService \
     LockClock \
     Screencast \
