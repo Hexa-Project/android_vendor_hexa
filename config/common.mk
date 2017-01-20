@@ -106,12 +106,6 @@ PRODUCT_PACKAGES += \
     WeatherManagerService \
 	OTAUpdates 
 
-# OTA Updater
-PRODUCT_PROPERTY_OVERRIDES += \
-  ro.ota.romname=Hexa-Project \
-  ro.ota.version=$(shell date -u +%Y%m%d) \
-  ro.ota.manifest=https://raw.githubusercontent.com/Hexa-Project/release-hexa/master/ota.xml
-
 # Optional CM packages
 PRODUCT_PACKAGES += \
     libemoji \
