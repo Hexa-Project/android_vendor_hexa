@@ -134,7 +134,8 @@ PRODUCT_PACKAGES += \
     SoundRecorder \
     Trebuchet \
     WallpaperPicker \
-    WeatherProvider
+    WeatherProvider \
+	OmniSwitch
 
 # Exchange support
 PRODUCT_PACKAGES += \
