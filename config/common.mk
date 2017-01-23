@@ -135,7 +135,8 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     WallpaperPicker \
     WeatherProvider \
-	OmniSwitch
+	OmniSwitch \
+	OmniStyle
 
 # Exchange support
 PRODUCT_PACKAGES += \
