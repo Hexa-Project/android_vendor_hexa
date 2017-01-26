@@ -34,6 +34,10 @@ endif
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
     vendor/hexa/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
+	
+#substratum
+PRODUCT_COPY_FILES += \
+    vendor/hexa/prebuilt/common/apk/substratum.apk:system/app/substratum/substratum.apk
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
