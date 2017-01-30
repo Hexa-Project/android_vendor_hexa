@@ -133,8 +133,6 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     LiveLockScreenService \
     LockClock \
-    Screencast \
-    SoundRecorder \
     Trebuchet \
     WallpaperPicker \
     WeatherProvider \
