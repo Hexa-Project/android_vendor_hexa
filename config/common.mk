@@ -137,8 +137,7 @@ PRODUCT_PACKAGES += \
     WallpaperPicker \
     WeatherProvider \
 	OmniSwitch \
-	OmniStyle \
-	Masquerade
+	OmniStyle 
 
 # Exchange support
 PRODUCT_PACKAGES += \
