@@ -364,4 +364,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include vendor/hexa/config/partner_gms.mk
 -include vendor/cyngn/product.mk
 
+ # Add extra libs for the compilers to use
+ export LD_LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LD_LIBRARY_PATH)
+ export LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LIBRARY_PATH)
+
 $(call prepend-product-if-exists, vendor/extra/product.mk)
