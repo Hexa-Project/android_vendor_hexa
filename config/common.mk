@@ -109,6 +109,10 @@ PRODUCT_PACKAGES += \
     Profiles \
     WeatherManagerService \
 	OTAUpdates 
+	
+# OMS THEMEINTERFACER
+PRODUCT_PACKAGES += \
+   ThemeInterfacer
 
 # Optional CM packages
 PRODUCT_PACKAGES += \
