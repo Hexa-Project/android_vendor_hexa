@@ -108,7 +108,8 @@ PRODUCT_PACKAGES += \
     Development \
     Profiles \
     WeatherManagerService \
-	OTAUpdates 
+	OTAUpdates \
+	OmniJaws
 	
 # OMS THEMEINTERFACER
 PRODUCT_PACKAGES += \
