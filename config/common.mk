@@ -128,6 +128,7 @@ PRODUCT_PACKAGES += \
     CMSettingsProvider \
     CMUpdater \
     CMWallpapers \
+    CustomTiles \
     Eleven \
     ExactCalculator \
     LiveLockScreenService \
