@@ -42,7 +42,7 @@ usage() {
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Default Options
-ARG_PREFIX_DIR=$DIR/out
+ARG_PREFIX_DIR=$OUT_DIR
 ARG_CLEAN_OPT=yes
 ARG_RESET_OPT=yes
 ARG_SYNC_OPT=yes
@@ -95,6 +95,10 @@ while [ $# -gt 0 ]; do
   esac
 done
 
+if [ "x${ARG_BLOCK_OTA}" = "xyes" ]; then
+	BLOCK_BASED_OTA=false
+fi
+
 # Set Out directory
 export OUT_DIR=${ARG_PREFIX_DIR}
 echo "Out directory set to: ($ARG_PREFIX_DIR)"
@@ -119,10 +123,6 @@ fi
 
 # Starting build
 echo "Starting build for ($ARG_DEVICE)"
-
-if [ "x${ARG_BLOCK_OTA}" = "xyes" ]; then
-	BLOCK_BASED_OTA=false
-fi
 
 # Make changeLog
 #vendor/kdp/utils/gen_changelog
