@@ -42,7 +42,7 @@ usage() {
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Default Options
-ARG_PREFIX_DIR=$OUT_DIR
+ARG_PREFIX_DIR=${OUT_DIR}
 ARG_CLEAN_OPT=yes
 ARG_RESET_OPT=yes
 ARG_SYNC_OPT=yes
@@ -99,6 +99,14 @@ if [ "x${ARG_BLOCK_OTA}" = "xyes" ]; then
 	BLOCK_BASED_OTA=false
 fi
 
+
+# Starting build
+echo "Starting build for ($ARG_DEVICE)"
+
+cd ${DIR}
+. build/envsetup.sh
+lunch hexa_${ARG_DEVICE}-userdebug
+
 # Set Out directory
 export OUT_DIR=${ARG_PREFIX_DIR}
 echo "Out directory set to: ($ARG_PREFIX_DIR)"
@@ -121,12 +129,8 @@ if [ "x${ARG_RESET_OPT}" = "xyes" ]; then
 	repo forall -c "git reset --hard HEAD; git clean -qf"
 fi
 
-# Starting build
-echo "Starting build for ($ARG_DEVICE)"
-
 # Make changeLog
 #vendor/kdp/utils/gen_changelog
-lunch hexa_${ARG_DEVICE}-userdebug
 mka bacon -j${ARG_JTHREAD_OPT}
 
 
