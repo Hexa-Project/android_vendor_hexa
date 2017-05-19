@@ -96,7 +96,7 @@ while [ $# -gt 0 ]; do
 done
 
 if [ "x${ARG_BLOCK_OTA}" = "xyes" ]; then
-	BLOCK_BASED_OTA=false
+	export BLOCK_BASED_OTA=false
 fi
 
 
