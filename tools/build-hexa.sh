@@ -125,8 +125,8 @@ if [ "x${ARG_BLOCK_OTA}" = "xyes" ]; then
 fi
 
 # Make changeLog
-vendor/kdp/utils/gen_changelog
-lunch kdp_${ARG_DEVICE}-userdebug
+#vendor/kdp/utils/gen_changelog
+lunch hexa_${ARG_DEVICE}-userdebug
 mka bacon -j${ARG_JTHREAD_OPT}
 
 
