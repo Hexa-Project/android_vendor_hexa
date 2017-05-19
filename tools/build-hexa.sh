@@ -35,7 +35,7 @@ usage() {
 #	echo -e "	--rom-gcc-version=*	 Set ROM GCC Version(EG: --rom-gcc-version=4.9, default to 4.9)"
 #	echo -e "	--kernel-gcc-version=*	Set Kernel GCC Version(EG: --kernel-gcc-version=5.2, default to 5.2)"
 	echo -e "${bldblu}  Example:${bldcya}"
-    echo -e "    ./build-hexa.sh --clean=yes --reset=yes --sync=no -j32 --device=shamu"
+    echo -e "    ./build-hexa.sh --clean=yes --reset=yes --sync=no -j32 --device=shamu ${txtrst}"
 }
 
 # Figure out the output directories
